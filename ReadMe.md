@@ -1,4 +1,27 @@
-﻿# MPh
+﻿# MPh-CDA-Linux
+This is a fork of MPh version 1.2.3 adapted to work on the Linux computers administrated by Chalmers University of Technology (CDA-Linux). The file discovery.py has been modified with a hard-coded path the the CDA Linux custom installation location of Comsol 6.2.
+
+Confirmed working 2023-01-17.
+
+Written originally by Albin Jonasson Svärdsby, tweaked by Viktor Lilja.
+
+## Example usage with pip
+Clone this repository to for example *
+`/chalmers/users/<cid>/pythonmodules/MPh-CDA-Linux/`. Then pip install to your python environment using 
+
+    pip install -e /chalmers/users/<cid>/pythonmodules/MPh-CDA-Linux
+
+MPh can then be used as normal:
+
+    import mph
+
+    # mph.option('classkit',True) # Try if you have problems with licenses
+    client = mph.start()
+
+
+## Original ReadMe below:
+
+# MPh
 *Pythonic scripting interface for Comsol Multiphysics*
 
 [Comsol] is a commercial software application that is widely used in

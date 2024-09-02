@@ -8,10 +8,10 @@ Confirmed working on CDA Linux 2024-09-02.
 
 
 ## Example usage with pip
-Clone this repository to for example *
-`/chalmers/users/<cid>/pythonmodules/MPh-CDA-Linux/`. Then pip install to your python environment using 
+Clone this repository to for example
+`/chalmers/users/<cid>/pythonmodules/MPh-Custom/`. Then pip install to your python environment using 
 
-    pip install -e /chalmers/users/<cid>/pythonmodules/MPh-CDA-Linux
+    pip install -e /chalmers/users/<cid>/pythonmodules/MPh-Custom
 
 MPh can then be used as normal:
 

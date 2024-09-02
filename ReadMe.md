@@ -1,7 +1,7 @@
 ﻿# MPh-Custom
 This is a fork of MPh version 1.2.3 adapted to work on the Linux computers administrated by Chalmers University of Technology (CDA-Linux) and NAISS compute clusters. The main change compared to the original MPh is that the file discovery.py has been modified with a hard-coded paths to custom installation locations.
 
-Additionally, a file custom_config.json has been added in the mph folder. This contains commands that are passed when starting a COMSOL server. The default commands forces COMSOL to all (or att least many of) the files it creates to the current directory. This is to make it obvious when COMSOL creates junk files, which quickly becomes a problem when you run thousands on simulations automatically.
+Additionally, a file custom_config.json has been added in the mph folder. This contains commands that are passed when starting a COMSOL server. The default commands force COMSOL to output all (or at least many of) the files it creates to the current directory. This is to make it obvious when COMSOL creates junk files, which quickly becomes a problem when you run thousands on simulations automatically.
 
 Confirmed working on CDA Linux 2024-09-02.
 

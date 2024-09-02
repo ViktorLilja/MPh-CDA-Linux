@@ -15,6 +15,8 @@ from subprocess import TimeoutExpired  # communication time-out
 from re import match as regex          # regular expression
 from time import perf_counter as now   # wall-clock time
 from logging import getLogger          # event logging
+import os
+import json
 
 ########################################
 # Globals                              #
@@ -81,6 +83,12 @@ class Server:
         # Remember user-provided command-line arguments.
         extra_arguments = arguments if arguments else []
 
+        # Read custom arguments from config file
+        custom_config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "custom_config.json")
+        with open(custom_config_path, "r") as f:
+            custom_config = json.load(f)
+        custom_arguments = custom_config["comsol-server-args"]
+
         # Start Comsol server as an external process.
         backend = discovery.backend(version)
         server  = backend['server']
@@ -103,7 +111,7 @@ class Server:
                 error = f'Invalid value "{multi}" for option "multi".'
                 log.error(error)
                 raise ValueError(error)
-        command = server + arguments + extra_arguments
+        command = server + arguments + extra_arguments + custom_arguments
         command[0] = str(command[0])   # Required for Python 3.6 and 3.7.
         process = start(command, stdin=PIPE, stdout=PIPE, errors='ignore')
 

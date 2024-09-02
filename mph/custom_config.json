@@ -1,0 +1,8 @@
+{
+    "comsol-server-args": [
+        "-tmpdir", "./comsol-junk-files/tmp",
+        "-recoverydir", "./comsol-junk-files/recovery",
+        "-configuration", "./comsol-junk-files/configuration",
+        "-data", "./comsol-junk-files/workspace"
+    ]
+}
